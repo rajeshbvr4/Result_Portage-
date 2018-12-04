@@ -1,0 +1,102 @@
+def sendmail(number):
+    if number == 1685351001:
+        email = "kasimca44@gmail.com"
+    if number == 1685351002:
+        email = "nityahoney123@gmail.com"
+    if number == 1685351003:
+        email = "rc.janakiram@gmail.com"  
+    if number == 1685351004:
+        email = "krishnapavaniganta@gmail.com"
+    if number == 1685351005:
+        email = "rajeshlearnt@gmail.com"
+    if number == 1685351006:
+        email = "amanigollamudi@gmail.com"
+    if number == 1685351007:
+        email = "vanikottapalli59@gmail.com"
+    if number == 1685351008:
+        email = "syam.mangineni@gmail.com"
+    if number == 1685351009:
+        email = "m.adityasatwik333@gmail.com"
+    if number == 1685351010:
+        email = "1028leela@gmail.com"
+    if number == 1685351011:
+        email = "punnammani@gmail.com"
+    if number == 1685351012:
+        email = "tulasi.irrinki@gmail.com"
+    if number == 1685351013:
+        email = "rajeshlearnt@gmail.com"
+    if number == 1685351014:
+        email = "geethavidiyala@gmail.comm"
+    if number == 1685351015:
+        email = "rajeshbvr4@gmail.com"
+    if number == 1685351016:
+        email = "molletinarendra964@gmail.com"
+    if number == 1685351017:
+        email = "paddupechetti@gmail.com"
+    if number == 1685351018:
+        email = "saiduttnrs@gmail.com"
+    if number == 1685351019:
+        email = "rajeshlearnt@gmail.com"
+    if number == 1685351020:
+        email = "namnnapriyanka@gmail.com"
+    if number == 1685351021:
+        email = "molletinarendra964@gmail.com"
+    if number == 1685351022:
+        email = "jyothiinadimpalli@gmail.com"
+    if number == 1685351023:
+        email = "paddupechetti@gmail.com"
+    if number == 1685351024:
+        email = "rajeshlearnt@gmail.com"
+    if number == 1685351025:
+        email = "molletinarendra964@gmail.com"
+    if number == 1685351026:
+        email = "sagarikathummalapalli9@gmail.com"
+    if number == 1685351027:
+        email = "syam.mangineni@gmail.com"
+    if number == 1685351028:
+        email = "tulasi.irrinki@gmail.com"
+    if number == 1685351029:
+        email = "geethavidiyala@gmail.com"
+    if number == 1685351030:
+        email = "syam.mangineni@gmail.com"
+    message = "University Semester Result: All subjects are clear"
+    friends = []
+    emails = []
+    friend = "rajesh"
+    friends.append(friend)
+    emails.append(email)
+    import smtplib
+    s = smtplib.SMTP("smtp.gmail.com",587)
+    s.starttls()
+    s.login("---Type Your Mail---","---Type Your Password---") ''' Type Your credentials '''
+    for friend in range(0,len(friends)):
+        s.sendmail("mailid@gmail.com",emails[friend],message)
+    s.quit()
+def wordcount(filename,listwords):
+    reg = 0
+    try:
+        file = open(filename,"r")
+        read = file.readlines()
+        file.close()
+        for word in listwords:
+            lower1 = word.lower()
+            for sentance in read:
+                line = sentance.split()
+                for each in line:
+                    lower2 = each.lower()
+                    if lower1 == lower2:
+                        reg = int(lower2)
+                        sendmail(reg)
+    except FileExistsError:
+        print("file not found")
+#Execution Starts from here 
+number = 1685351001 #  Starting number of a student
+i = 1
+while (i <= 29):
+    strng = str(number)
+    number = number + 1
+    wordcount("G:/python/student_register_numbers.txt",[strng])
+    i = i + 1
+    
+    
+    
